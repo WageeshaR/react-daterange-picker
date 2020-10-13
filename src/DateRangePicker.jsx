@@ -146,6 +146,7 @@ export default class DateRangePicker extends PureComponent {
       monthPlaceholder,
       name,
       nativeInputAriaLabel,
+      noBorder,
       rangeDivider,
       required,
       showLeadingZeros,
@@ -186,7 +187,7 @@ export default class DateRangePicker extends PureComponent {
     };
 
     return (
-      <div className={`${baseClassName}__wrapper`}>
+      <div className={noBorder ? `${baseClassName}__wrapper_no_border` : `${baseClassName}__wrapper`}>
         <DateInput
           {...commonProps}
           autoFocus={autoFocus}
